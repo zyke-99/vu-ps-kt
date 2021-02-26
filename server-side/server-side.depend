@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1614156642 source:/mif/stud3/2018/zyke5578/Darbastalis/sockets/server-side/main.c
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+
