@@ -6,3 +6,12 @@
 	<arpa/inet.h>
 	<unistd.h>
 
+1614805354 source:/mif/stud3/2018/zyke5578/Darbastalis/vu-ps-kt/server-side/main.c
+	<stdio.h>
+	<string.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<stdlib.h>
+	<errno.h>
+

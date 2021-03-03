@@ -53,8 +53,8 @@ int main(int argc , char *argv[])
 		printf("Could not create socket");
 	}
 	*/
-
-	if(socket_desc = socket(AF_INET6 , SOCK_STREAM , 0)<0) {
+	socket_desc = socket(AF_INET6 , SOCK_STREAM , 0);
+	if(socket_desc<0) {
 
 		printf("Could not create socket\n");
 	
@@ -84,7 +84,7 @@ int main(int argc , char *argv[])
 	//Surisa socket'a su paduota musu serverio adreso struktura (Siuo atveju device adresu ir pasirinktu 9000 port'u)
 	if( bind(socket_desc,(struct sockaddr *)&server , sizeof(server)) < 0)
 	{
-		printf("Failed to bind the socket to the given address and port");
+		puts("Failed to bind the socket to the given address and port");
 		return 1;
 	}
 	puts("Socket bound succsesfuly to the given address and port\n");
@@ -92,13 +92,13 @@ int main(int argc , char *argv[])
 	//klausom atkeliaujancios info i sita addr ir port(socketa)
 	if((listen(socket_desc , 3))<0) {
 	
-		printf("Failed to set socket to listening mode");
+		puts("Failed to set socket to listening mode");
 		return 1;
 
 	}
 
 	//Priimam atkeliaujancia uzklausa prisijungti
-	printf("Waiting for client to connect\n");
+	puts("Waiting for client to connect\n");
 
 
 	char buffer[1024];
